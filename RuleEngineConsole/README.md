@@ -1,4 +1,5 @@
 ﻿##############        Rule Engine    ########################## 
+
 Version :1.0
 Date: 07/01/2020
 
@@ -59,8 +60,9 @@ For version 1.0
 	
 What's the runtime performance? What is the complexity? Where are the bottlenecks?
 - For any raw_data to get verified against the rules
-	Worst case time complexity = O(maximum number of rules for 1 signal * number of raw_data)
-	Amortized time complexity will be = O(n)  where n= number of data inputs. 
+	Worst case time complexity = O(maximum number of rules for 1 signal * number of raw_data)/ no of threads
+	Amortized time complexity will be = O(n)  where n= number of data inputs/ no of threds. 
+	
 
   Bottlenecks for current implementation would be 
    - it will not handle the json with different datatypes, which are not present in the problem definintion.   
